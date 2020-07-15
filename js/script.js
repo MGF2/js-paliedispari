@@ -28,19 +28,28 @@
 // console.log("La tua parola al contrario è:" + " " + stringaRev);
 
 //CON LA FUNZIONE
+
+//Chiedo la parola
 var parola = prompt("Inserisci una parola");
-var stringaNor = parola.toLowerCase();
-palindroma(stringaNor);
+//Trasformo in minuscolo
+var parolalow = parola.toLowerCase();
+console.log("La tua parola è:" + " " + parolalow);
+//Richiamo la funzione
+palindroma(parolalow);
 
 
-function palindroma(scelta) {
-  var stringaRev = " ";
+function palindroma(parolalow) {
+  //Stringa vuota per parola invertita
+  var parolaRev = "";
 
-  for ( i = stringaNor.length - 1; i >= 0; i--) {
-    stringaRev += stringaNor[i];
+  //Ciclo per inserire la parola al contrario nella stringa vuota
+  for ( i = parolalow.length - 1; i >= 0; i--) {
+    parolaRev += parolalow[i];
   }
+  console.log("La tua parola al contrario è:" + " " + parolaRev);
 
-  if (stringaRev == stringaNor) {
+  //Confronto le parole
+  if (parolaRev == parolalow) {
     console.log("La parola è palindroma");
   } else {
     console.log("La parola non è palindroma");
